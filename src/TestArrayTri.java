@@ -7,7 +7,7 @@ public class TestArrayTri {
 		// Soit le tableau suivant
 		int[] array = { 1, 15, -3, 0, 8, 7, 4, -2, 28, 7, -1, 17, 2, 3, 0, 14, -4 };
 
-		// Faire un algorithme qui trie le tableau dans l’ordre ascendant
+		// Faire un algorithme qui trie le tableau dans l'ordre ascendant
 		System.out.println("La lise triee par ordre croissant est donc");
 		for (int i = 0; i < array.length; i++) {
 			for (int j = i; j < array.length; j++) {
