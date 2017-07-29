@@ -9,19 +9,33 @@ public class TestFibonacci {
 		Scanner questionUser = new Scanner(System.in);
 
 		int rang = questionUser.nextInt();
-		int[] fibonacci = new int[rang];
-
-		fibonacci[0] = 0;
-		fibonacci[1] = 1;
-
-		for (int i = 0; i < fibonacci.length - 3; i++) {
-
-			fibonacci[i + 2] = fibonacci[i] + fibonacci[i+1];
-
-			
-			
+		
+		int nombre1 = 0;
+		int nombre2 = 1;
+		
+		if (rang == 1) {
+			System.out.println("0");
 		}
-		System.out.println("La nombre de rang N de la suite de Fibonacci est " + fibonacci[rang -1] );
+		
+		else if (rang == 2) {
+				System.out.println("1");
+		}
+		
+		else {
+			for (int i = 3; i<= rang; i++) {
+				
+				int temporaire = 0;
+				
+				temporaire = nombre1;
+				nombre1 = nombre2;
+				nombre2 = nombre2 + temporaire;
+			}
+		}
+			
+		System.out.println("La nombre de rang N de la suite de Fibonacci est " + nombre2 );
+		questionUser.close();
 	}
+		
+	
 
 }
